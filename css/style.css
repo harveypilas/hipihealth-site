@@ -1,1 +1,60 @@
+/* ===== LOGO I BRANDING ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header img.logo {
+  height: 90px;                /* 🔹 poveća logo */
+  width: auto;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+header img.logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-text strong {
+  font-size: 1.8rem;
+  color: #115e59;
+  letter-spacing: 0.5px;
+}
+
+.brand-text span {
+  font-size: 0.9rem;
+  color: #0f766e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigacija */
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #115e59;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #0d9488;
+}
 
