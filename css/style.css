@@ -18,7 +18,7 @@ header {
 }
 
 header img.logo {
-  height: clamp(56px, 8vw, 88px);
+  height: clamp(70px, 10vw, 110px); /* 🔹 povećan logo */
   width: auto;
   vertical-align: middle;
   transition: transform 0.3s ease;
