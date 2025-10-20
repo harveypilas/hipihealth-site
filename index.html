@@ -1,230 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HIPI Health — Hrana je lijek • Kulinarska medicina</title>
-  <meta name="description" content="HIPI Health je interdisciplinarna platforma za kulinarsku medicinu u Hrvatskoj. Spajamo kuhare, liječnike, nutricioniste i prehrambene tehnologe u plant-based i One Health pristupu." />
-  <link rel="icon" href="/assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPI Health – Hrana kao lijek</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="HIPI Health — Hrana je lijek">
-  <meta property="og:description" content="Plant-forward, znanstveno utemeljen pristup zdravlju crijeva i dugovječnosti.">
-  <meta property="og:image" content="/assets/og-cover.jpg">
-  <meta property="og:url" content="https://hipihealth.com">
-  <meta property="og:type" content="website">
+  <meta name="description" content="HIPI Health – povezujemo kuhare, liječnike, nutricioniste i prehrambene tehnologa u svrhu zdravlja crijeva, dugovječnosti i održivog života.">
+  <link rel="icon" href="/1/Hipi Health logo.png">
 
   <style>
-    :root{
-      /* paleta */
-      --teal:#0b8e85; --teal-600:#0a7a73; --leaf:#78b188; --accent:#f25b42;
-      --ink:#1a2422; --muted:#6b7280; --bg:#f7f8f6; --card:#ffffff; --line:#e6e9ec;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f9faf9;
+      color: #213b33;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
-    img{max-width:100%;height:auto}
-    a{color:var(--teal);text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:0 16px}
-    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:20}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{height:40px}
-    .menu a{margin-left:14px;font-size:15px}
-    section{padding:64px 0}
-    h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:10px 0 8px;color:var(--teal)}
-    h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 10px;color:var(--teal)}
-    h3{margin:0 0 6px;color:var(--accent)}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;border:1px solid var(--leaf);color:var(--teal);background:#ecf6f5;padding:4px 10px;border-radius:999px;font-size:12px}
-    .btn{display:inline-block;background:var(--teal);color:#fff;padding:10px 14px;border-radius:12px}
-    .btn.alt{background:#fff;border:1px solid var(--teal);color:var(--teal)}
-    .grid{display:grid;gap:16px}
-    .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-    .heroimg{border-radius:16px;border:1px solid var(--line)}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{background:#eef5f4;border:1px solid #d7e6e3;color:#245b58;padding:6px 10px;border-radius:999px;font-size:12px}
-    .partners{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .partner{display:flex;gap:8px;align-items:center;background:#fff;border:1px dashed #d5dedc;border-radius:12px;padding:8px 12px}
-    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
-    .kpi strong{display:block;font-size:22px;color:var(--teal)}
-    footer{border-top:1px solid var(--line);background:#ffffffcc}
-    .footer{max-width:1080px;margin:0 auto;padding:20px 16px;color:#6b7280;font-size:14px}
-    /* responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid2,.grid3{grid-template-columns:1fr}}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header img.logo { height: 40px; vertical-align: middle; }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #115e59;
+      font-weight: 600;
+    }
+    nav a:hover { color: #0d9488; }
+    section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+    h1, h2 { color: #115e59; }
+    .cta-btn {
+      background-color: #0d9488;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .cta-btn:hover { background-color: #115e59; }
+
+    /* partner logoi */
+    .partners img {
+      height: 80px;
+      margin: 10px 25px;
+      vertical-align: middle;
+      filter: saturate(1.1);
+    }
+
+    footer {
+      background-color: #115e59;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: #bbf7d0; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
+
 <body>
-  <!-- NAV -->
   <header>
-    <nav class="container">
-      <div class="brand">
-        <img src="/assets/logo.png" alt="HIPI Health logo" class="logo">
-        <strong>HIPI Health</strong>
-      </div>
-      <div class="menu">
-        <a href="#o-nama">O nama</a>
-        <a href="#projekti">Projekti</a>
-        <a href="#suradnja">Suradnja</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
+    <div>
+      <img src="/1/Hipi Health logo.png" alt="HIPI Health logo" class="logo">
+      <strong>HIPI Health</strong>
+    </div>
+    <nav>
+      <a href="#onama">O nama</a>
+      <a href="#projekti">Projekti</a>
+      <a href="#suradnja">Suradnja</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#blog">Blog</a>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero" id="pocetna">
-      <div>
-        <span class="badge">Kulinarska medicina • One Health</span>
-        <h1>Hrana je lijek. Znanost kao dokaz.</h1>
-        <p>Gradimo most između kuhinje i medicine. HIPI Health okuplja kuhare, liječnike, nutricioniste i prehrambene tehnologe — s fokusom na zdravlje crijeva, metaboličko zdravlje i dugovječnost.</p>
-        <div class="chips">
-          <span class="chip">Plant-forward</span>
-          <span class="chip">Zdravlje crijeva</span>
-          <span class="chip">Fermenti</span>
-          <span class="chip">Edukacije</span>
-        </div>
-        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn" href="#o-nama">Saznaj više</a>
-          <a class="btn alt" href="#kontakt">Postani partner/ica</a>
-        </div>
-        <p class="muted" style="margin-top:8px">Osnivač: Harvey Pilas, chef edukator (Zdrava Hrvatska).</p>
-      </div>
-      <div>
-        <img class="heroimg" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1400&auto=format&fit=crop" alt="Biljna hrana i laboratorij u harmoniji">
-      </div>
-    </section>
+  <section id="pocetna">
+    <h1>Hrana kao lijek. Znanost kao dokaz.</h1>
+    <p>Gradimo most između kuhinje i medicine. HIPI Health okuplja kuhare, liječnike, nutricioniste i prehrambene tehnologa kako bismo podržali zdravlje crijeva i dugovječnost.</p>
+    <button class="cta-btn" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Pridruži se</button>
+  </section>
 
-    <!-- O NAMA -->
-    <section id="o-nama">
-      <h2>O HIPI Health</h2>
-      <div class="grid grid2">
-        <div class="card">
-          <h3>Misija — “Hrana je lijek”</h3>
-          <p>Kulinarska medicina spaja znanost o prehrani i praktične vještine kuhanja. U središtu su mikrobiota i metabolizam — kako bi hrana svakodnevno radila za nas, a ne protiv nas.</p>
-          <ul>
-            <li>Plant-based &amp; One Health pristup.</li>
-            <li>Smjernice temeljene na dokazima + primjenjivo u kuhinji.</li>
-            <li>Edukacija pacijenata i zdravstvenih timova.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Zdravlje probave (gut health)</h3>
-          <p>Programi za podršku crijevnoj barijeri: fermenti, vlakna, polifenoli i osnove metaboličke fleksibilnosti. Fokus na <em>jednostavne</em> recepte i navike koje traju.</p>
-          <div class="kpis">
-            <div class="kpi"><strong>70%</strong>imuniteta dolazi iz crijeva</div>
-            <div class="kpi"><strong>3×</strong>tjedno fermentirana hrana (probiotici) (cilj)</div>
-            <div class="kpi"><strong>30g</strong>Intrinzična vlakna (prebiotici)/dan (meta)</div>
-          </div>
-        </div>
-      </div>
+  <section id="onama">
+    <h2>O nama</h2>
+    <p><strong>HIPI Health</strong> je platforma koja spaja kulinarsku medicinu, biotehnologiju i znanost o prehrani.</p>
+    <p>Naša misija: <em>Hrana je lijek</em>. Promičemo zdrave navike, prehranu bogatu biljnim vlaknima i regenerativne procese kroz edukacije, istraživanja i partnerske projekte.</p>
+  </section>
 
-      <div class="card" style="margin-top:16px">
-        <h3>Partneri</h3>
-        <div class="partners">
-          <div class="partner"><img src="/assets/proxi-farma.png" alt="" style="height:22px"><span>Proxi Farma</span></div>
-          <div class="partner"><img src="/assets/potion1st.png"   alt="" style="height:22px"><span>Potion 1st</span></div>
-        </div>
-      </div>
+  <section id="projekti">
+    <h2>Naši projekti</h2>
+    <ul style="list-style:none; padding:0;">
+      <li><strong>Planeat</strong> – digitalna platforma za personaliziranu prehranu i planiranje obroka</li>
+      <li><strong>Potion 1st</strong> – funkcionalni smoothie s dokazanim učincima na mikrobiom</li>
+      <li><strong>Zdrava Hrvatska</strong> – nacionalna kampanja za prevenciju kroz prehranu</li>
+    </ul>
+  </section>
 
-      <!-- Jednostavni “grafikon tanjura” (SVG) -->
-      <div class="card" style="margin-top:16px">
-        <h3>Plant-forward tanjur (infografika)</h3>
-        <svg viewBox="0 0 220 120" width="100%" aria-label="Tanjur: 50% povrće, 25% cjelovite žitarice, 25% proteini biljnog podrijetla">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#78b188"/><stop offset="1" stop-color="#0b8e85"/></linearGradient>
-          </defs>
-          <circle cx="60" cy="60" r="50" fill="#eef5f4" stroke="#d7e6e3"/>
-          <!-- povrće 50% -->
-          <path d="M60,60 L60,10 A50,50 0 0,1 103.5,96.6 Z" fill="url(#g1)"/>
-          <path d="M60,60 L103.5,96.6 A50,50 0 0,1 16.5,96.6 Z" fill="#cfe6d8"/>
-          <!-- žitarice 25% -->
-          <path d="M60,60 L16.5,96.6 A50,50 0 0,1 16.5,23.4 Z" fill="#ffd9a8"/>
-          <!-- proteini 25% -->
-          <path d="M60,60 L16.5,23.4 A50,50 0 0,1 60,10 Z" fill="#b8e0de"/>
-          <g font-size="10" fill="#245b58">
-            <text x="135" y="40">50% povrće</text>
-            <text x="135" y="58">25% cjel. žitarice</text>
-            <text x="135" y="76">25% biljni proteini</text>
-          </g>
-        </svg>
-        <p class="muted" style="margin-top:6px">Jednostavna vizualna smjernica za dnevni tanjur.</p>
-      </div>
-    </section>
+  <section id="suradnja">
+    <h2>Suradnja i partneri</h2>
+    <p>Surađujemo s klinikama, nutricionistima i edukacijskim ustanovama kako bismo uveli kulinarsku medicinu u praksu.</p>
 
-    <!-- PROJEKTI -->
-    <section id="projekti">
-      <h2>Projekti</h2>
-      <div class="grid grid3">
-        <div class="card">
-          <h3>Planeat</h3>
-          <p>Radionice i alat za planiranje obroka: lokalne namirnice, plant-forward recepti i personalizirane smjernice.</p>
-        </div>
-        <div class="card">
-          <h3>Potion 1st</h3>
-          <p>Intenzivni program osnova kulinarske medicine: zdravi tanjur, fermenti, mikrobiota — spremno za klinike.</p>
-        </div>
-        <div class="card">
-          <h3>Zdrava Hrvatska</h3>
-          <p>Inicijativa sa zdravstvenim partnerima za praktičnu edukaciju i mjerljive ishode u zajednici.</p>
-        </div>
-      </div>
-    </section>
+    <div class="partners">
+      <img src="/1/HealingHands.webp" alt="Healing Hands logo">
+      <img src="/1/Potion1st.webp" alt="Potion 1st logo">
+    </div>
+  </section>
 
-    <!-- SURADNJA -->
-    <section id="suradnja">
-      <h2>Suradnja</h2>
-      <div class="grid grid2">
-        <div class="card">
-          <h3>Klinike & liječnici</h3>
-          <p>Koprodukcija edukacija za javnost (T2D, pretilost, IBS), kulinarski demo, jelovnici usklađeni sa smjernicama.</p>
-          <ul>
-            <li>Materijali za klijente</li>
-            <li>Kitchen-classroom radionice</li>
-            <li>Praćenje navika (jednostavni alati)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Nutricionisti & tehnolozi</h3>
-          <p>Razmjena recepata, standardizacija procesa, razvoj proizvoda i funkcionalne hrane.</p>
-          <p class="muted">Javite nam se — odgovor u 24–48 h.</p>
-        </div>
-      </div>
-    </section>
+  <section id="kontakt">
+    <h2>Kontaktirajte nas</h2>
+    <p>Želite surađivati, pridružiti se projektu ili saznati više?</p>
+    <p>📧 <a href="mailto:harveypilas@gmail.com">harveypilas@gmail.com</a></p>
+    <p>📞 WhatsApp: <a href="https://wa.me/385976800692" target="_blank">+385 97 6800 692</a></p>
+  </section>
 
-    <!-- KONTAKT (Netlify Forms) -->
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <div class="grid grid2">
-        <div class="card">
-          <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="kontakt">
-            <p style="display:none;"><label>Ne ispunjavati: <input name="bot-field"></label></p>
-            <label>Ime i prezime<br><input name="name" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px"></label><br><br>
-            <label>Email<br><input type="email" name="email" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px"></label><br><br>
-            <label>Poruka<br><textarea name="message" rows="5" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px"></textarea></label><br>
-            <button class="btn" type="submit">Pošalji</button>
-          </form>
-          <p class="muted" style="margin-top:8px">Ili piši na: <a href="mailto:info@hipihealth.com">info@hipihealth.com</a></p>
-        </div>
-        <div class="card">
-          <h3>Adresa & mreže</h3>
-          <p>Rijeka, Hrvatska</p>
-          <p class="muted">Instagram & Facebook (uskoro)</p>
-          <p class="badge" style="border-color:#f3d4cf;color:#9b3b2b;background:#fff5f3">Ne-komercijalna edukativna platforma — Faza 1 (MVP)</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section id="blog">
+    <h2>Blog & Novosti</h2>
+    <p>Uskoro: članci, recepti i istraživanja o mikrobiomu i prehrani.</p>
+  </section>
 
   <footer>
-    <div class="footer">
-      © <span id="y"></span> HIPI Health • #Zdrava Hrvatska
-    </div>
+    <p>© 2025 HIPI Health • Platforma kulinarske medicine • <a href="#pocetna">Vrati se na vrh</a></p>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
