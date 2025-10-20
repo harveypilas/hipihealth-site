@@ -13,19 +13,36 @@
 </head>
 
 <body>
-  <header>
-    <div>
-      <img src="/1/Hipi Health logo.png" alt="HIPI Health logo" class="logo">
-      <strong>HIPI Health</strong>
-    </div>
-    <nav>
+  <header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="HIPI Health – početna">
+      <img
+        src="/1/Hipi Health logo.png"
+        alt="HIPI Health logo"
+        class="logo"
+        width="240" height="240"
+        decoding="async" />
+      <div class="brand-text">
+        <strong>HIPI Health</strong>
+        <span>Hrana kao lijek</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      ☰
+      <span class="sr-only">Otvori izbornik</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Glavna navigacija">
       <a href="#onama">O nama</a>
       <a href="#projekti">Projekti</a>
       <a href="#suradnja">Suradnja</a>
       <a href="#kontakt">Kontakt</a>
       <a href="#blog">Blog</a>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <section id="pocetna">
     <h1>Hrana kao lijek. Znanost kao dokaz.</h1>
