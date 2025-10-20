@@ -17,11 +17,18 @@ header {
   gap: 16px;
 }
 
+/* HIPI Health LOGO – optimizirana veličina i proporcije */
 header img.logo {
-  height: clamp(70px, 10vw, 110px); /* 🔹 povećan logo */
+  height: clamp(80px, 9vw, 120px); /* 📏 idealna visina loga */
   width: auto;
+  max-width: 280px;                /* ograničava da ne "pobjegne" previše u širinu */
+  object-fit: contain;
   vertical-align: middle;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease-in-out;
+}
+
+header img.logo:hover {
+  transform: scale(1.04);
 }
 
 header img.logo:hover {
