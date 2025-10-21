@@ -222,6 +222,12 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
   color:var(--teal); text-decoration:none; border:1px solid #99f6e4; background:#ecfdf5;
   padding:6px 10px; border-radius:999px; font-weight:600;
 }
+
+.contact-form [data-netlify-recaptcha] {
+  display: inline-block;
+  margin: 10px 0 14px;
+}
+
 .contact-side .socials a:hover{ background:#d1fae5 }
 
 .notice{ font-size:.85rem; color:#6b7280; margin-top:10px }
