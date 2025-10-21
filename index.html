@@ -256,12 +256,77 @@
 </section>
 
 
-  <section id="kontakt">
-    <h2>Kontaktirajte nas</h2>
-    <p>Želite surađivati, pridružiti se projektu ili saznati više?</p>
-    <p>📧 <a href="mailto:harveypilas@gmail.com">harveypilas@gmail.com</a></p>
-    <p>📞 WhatsApp: <a href="https://wa.me/385976800692" target="_blank">+385 97 6800 692</a></p>
-  </section>
+  <section id="kontakt" class="contact-section">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <p class="contact-lead">
+      Imaš prijedlog za suradnju, edukaciju ili projekt? Pošalji poruku – javit ćemo se ubrzo.
+    </p>
+
+    <div class="contact-grid">
+      <!-- Lijevo: obrazac -->
+      <div class="contact-card">
+        <!-- Netlify Forms -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="contact-form">
+          <!-- obavezno: skriveni form-name -->
+          <input type="hidden" name="form-name" value="contact">
+          <!-- honeypot (skriti od ljudi) -->
+          <div class="hidden">
+            <label>Ne ispunjavaj ovo: <input name="bot-field" /></label>
+          </div>
+
+          <div class="form-row">
+            <label for="name">Ime i prezime *</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="org">Organizacija (opcionalno)</label>
+            <input id="org" name="organization" type="text" placeholder="Klinika, udruga, tvrtka…">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Poruka *</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            Slažem se da HIPI Health koristi ove podatke za kontakt u vezi upita. (GDPR)
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Pošalji poruku</button>
+          </div>
+        </form>
+        <p class="notice">Ovaj obrazac koristi Netlify Forms – nema dodatne konfiguracije ni backend koda.</p>
+      </div>
+
+      <!-- Desno: direktni kontakti -->
+      <aside class="contact-side">
+        <div class="contact-card">
+          <h3>Direktan kontakt</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:harveypilas@gmail.com">harveypilas@gmail.com</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/385976800692">+385 97 6800 692</a></li>
+            <li><strong>Lokacija:</strong> Crikvenica, Hrvatska</li>
+          </ul>
+          <h3>Pratite nas</h3>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
 
   <section id="blog">
     <h2>Blog & Novosti</h2>
