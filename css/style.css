@@ -56,37 +56,51 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 
 /* ========= Partners ========= */
     
-.partners-section { padding: 60px 0; background:#f8faf8; text-align:center; }
+/* ===== Partneri (layout) ===== */
+.partners-section {
+  padding: 70px 0;
+  background: #f8faf8;
+  text-align: center;
+}
 .partners-section h2 { color: var(--teal); margin: 0 0 8px; }
-.partners-section p  { max-width: 780px; margin: 0 auto 28px; color:#374151; }
+.partners-section p  { max-width: 780px; margin: 0 auto 28px; color: #374151; }
 
 .partners-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;   /* centriraj kartice */
   align-items: flex-start;
-  gap: 36px 28px;   /* više zraka između logotipa */
-  margin-top: 36px;
+  gap: 28px;
+  margin-top: 32px;
 }
-    
-.partner-card{
-  background:#fff; border:1px solid #e5e7eb; border-radius:16px;
-  max-width: 280px; padding:22px 18px; text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,.04);
-  transition:transform .2s ease, box-shadow .2s ease;
+
+.partner-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  max-width: 280px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.partner-card:hover{ transform: translateY(-4px); }
+.partner-card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.08); }
+
 .partner-card img {
   display: block;
-  height: 60px;                 /* referenca – kao MEDRI */
+  height: 60px;              /* MEDRI-referenca */
   width: auto;
   margin: 0 auto 14px auto;
-  object-fit: contain;          /* očuvaj proporcije logotipa */
-  background-color: #fff;       /* bijela podloga, ako logo ima prozirnost */
-  padding: 6px 12px;            /* unutarnji prostor za “disanje” */
-  border-radius: 8px;           /* blago zaobljeni rubovi */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06); /* lagani balans */
+  object-fit: contain;
+  background: #fff;
+  padding: 6px 12px;         /* “zrak” oko logotipa */
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
+/* Ako želiš malo “pojačati” vizualno laganije logotipe: */
+/* .partner-card img[alt*="Potion 1st"],
+   .partner-card img[alt*="Healing Hands"] { height: 70px; } */
+
 
 .partner-card h3{
   color:var(--teal); font-size:1.05rem; margin:6px 0 4px;
