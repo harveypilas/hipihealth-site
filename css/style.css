@@ -78,7 +78,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 .partner-card:hover{ transform: translateY(-4px); }
 .partner-card img {
   display: block;
-  height: 60px;                 /* referenca – kao MEDRI */
+  height: 55px;                 /* referenca – kao MEDRI */
   width: auto;
   margin: 0 auto 14px auto;
   object-fit: contain;          /* očuvaj proporcije logotipa */
@@ -96,7 +96,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 }
 
 @media (max-width:720px){
-  .partner-card{ max-width:92% }
+  .partner-card{ max-width:50% }
 }
    
     padding:10px 0;
