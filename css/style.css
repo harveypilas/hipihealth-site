@@ -387,3 +387,24 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 }
 .post-card h3{ color:var(--teal); margin:4px 0 8px }
 .post-card p{ color:#374151; margin:0 0 10px; line-height:1.55 }
+
+/* ===== Footer centriranje ===== */
+footer {
+  text-align: center;           /* sve u sredinu */
+  padding: 40px 0 20px;         /* gornji razmak */
+  background: #f9faf9;          /* svijetla podloga */
+  color: #374151;               /* neutralna boja teksta */
+  font-size: 0.95rem;           /* malo manji font */
+  border-top: 1px solid #e5e7eb;/* tanka linija razgraničenja */
+}
+
+footer a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #0d9488;
+  text-decoration: underline;
+}
