@@ -261,3 +261,35 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 .contact-side .socials a:hover{ background:#d1fae5 }
 
 .notice{ font-size:.85rem; color:#6b7280; margin-top:10px }
+
+/* ===== Partneri – vodoravni layout ===== */
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;             /* razmak među logotipima */
+  margin-top: 40px;
+}
+
+.partners-logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partners-logos a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.partners-logos img {
+  height: 60px;           /* standardna visina loga */
+  width: auto;
+  object-fit: contain;
+}
