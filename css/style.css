@@ -460,3 +460,42 @@ footer a:hover {
   height: 30px;
   filter: brightness(0) invert(1);
 }
+
+/* Naslovi sekcija centrirani */
+#onama h2{
+  text-align:center;
+  margin-bottom: 10px;
+}
+
+/* ===== Mission card ===== */
+.mission-card{
+  max-width: 920px;
+  margin: 18px auto 8px;
+  padding: 22px 22px;
+  background: linear-gradient(90deg, #ecfdf5 0%, #ffffff 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(13,148,136, .08);
+  text-align: center;
+}
+
+.mission-pill{
+  display:inline-block;
+  font-size: .82rem;
+  letter-spacing: .4px;
+  font-weight: 700;
+  color: #0f766e;
+  background: #d1fae5;
+  border: 1px solid #99f6e4;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.mission-lead{
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color:#0f172a;
+}
