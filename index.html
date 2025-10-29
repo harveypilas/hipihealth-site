@@ -344,5 +344,34 @@ Cilj je pozicionirati Hrvatsku kao europskog predvodnika u području funkcionaln
   <footer>
     <p>© 2025 HIPI Health • Platforma kulinarske medicine • <a href="#pocetna">Vrati se na vrh</a></p>
   </footer>
+   <!-- Scroll to top gumb -->
+<button id="scrollTopBtn" title="Vrati se na vrh">↑</button>
+
+<script>
+  // Prikaz gumba kad se skrola
+  window.addEventListener("scroll", () => {
+    const btn = document.getElementById("scrollTopBtn");
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+  // Povratak na vrh stranice s glatkim scrollom
+  document.getElementById("scrollTopBtn").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+    <!-- WhatsApp kontakt gumb -->
+<a href="https://wa.me/385976800692" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Kontaktiraj nas putem WhatsAppa">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp logo">
+</a>
+
 </body>
 </html>
