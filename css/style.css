@@ -332,29 +332,48 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
 .notice{ font-size:.85rem; color:#6b7280; margin-top:10px }
 
 /* ===== Partneri – vodoravni layout ===== */
+/* ===== Partneri – vodoravni layout ===== */
 .partners-logos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;             /* razmak među logotipima */
+  gap: 40px;
   margin-top: 40px;
 }
 
-.partners-logos a{
-  background:#fff; border-radius:12px;
-  padding:14px 20px; box-shadow:0 2px 8px rgba(0,0,0,.06);
+.partners-logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.partners-logos a:hover{ transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.08); }
-.partners-logos a:hover img{ filter:none; opacity:1; }
-
-.partners-logos img{
-  height:60px; width:auto; object-fit:contain;
-  filter: grayscale(100%) contrast(1.1) opacity(.9);
-  transition: filter .25s ease, opacity .25s ease;
+/* — prirodne boje stalno — */
+.partners-logos img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: none;            /* <-- ključno */
+  opacity: 1;              /* <-- bez izblijednjivanja */
+  transition: transform .2s ease;
 }
+
+/* samo suptilan hover, bez promjene boje */
+.partners-logos a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+.partners-logos a:hover img {
+  transform: scale(1.03);
+  filter: none;            /* sigurnosno – i na hover ostaje u boji */
+  opacity: 1;
+}
+
 
 /* ===== Shared: centriraj section naslove ===== */
 .projects-section > .container > h2,
