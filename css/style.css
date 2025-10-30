@@ -137,6 +137,30 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
 @media (max-width:720px){
   .partner-card{ max-width:50% }
 }
+
+ /* ===== Partner logos: subtle lift/shadow on hover ===== */
+.partners-logos a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+.partners-logos img{
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: none !important;    /* osiguraj da NEMA grayscale-a */
+}
+
+.partners-logos a:hover{
+  transform: translateY(-6px) scale(1.02);           /* blagi podizaj */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);          /* finija sjena */
+}
    
     padding:10px 0;
   }
@@ -220,6 +244,15 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
   background: #fff;
 }
 
+.projects-lead,
+.collab-lead,
+.partners-section > .container > p,
+.blog-intro,
+.contact-lead{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .meta{
   display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:0 0 14px;
@@ -644,4 +677,20 @@ footer a:hover {
   filter: none !important;
   -webkit-filter: none !important;
   opacity: 1 !important;
+}
+
+/* ===== Tighter layout on wide screens ===== */
+@media (min-width: 1200px){
+  .container{
+    max-width: 1040px;   /* bilo 1120px; slobodno stavi 1000–1080 po ukusu */
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Dugi pasusi neka budu uži i centrirani (bolja čitljivost) */
+#onama .container p{
+  max-width: 880px;      /* ugodna duljina reda teksta */
+  margin: 0 auto 18px;   /* centriraj + zadrži donji razmak */
+  line-height: 1.75;     /* lakše čitanje */
 }
