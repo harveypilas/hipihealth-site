@@ -637,3 +637,11 @@ footer a:hover {
   .feature-item{ max-width:140px; font-size:.9rem; }
   .feature-item img{ width:64px; height:64px; }
 }
+
+/* Partner logos: force color (safety) */
+.partners-logos img,
+.partner-card img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+}
