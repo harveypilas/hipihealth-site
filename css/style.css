@@ -15,6 +15,13 @@
                radial-gradient(900px 600px at -10% 20%, #a7f3d0 0%, transparent 45%);
 }
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
+/* GLOBAL page container (centar + rubni "zrak") */
+.container{
+  width:100%;
+  max-width:1120px;
+  margin:0 auto;      /* centrira sve unutar stranice */
+  padding:0 24px;     /* zrak od ruba */
+}
 
 /* ========= Header / brand ========= */
 .site-header{
@@ -71,6 +78,7 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
   .site-nav{
     display:none;             /* skriveno dok se ne otvori */
     flex-direction:column; gap:10px; width:100%;
+  }
 
 /* ========= Partners ========= */
     
