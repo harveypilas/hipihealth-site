@@ -702,3 +702,18 @@ footer a:hover {
   margin: 0 auto 18px;   /* centriraj + zadrži donji razmak */
   line-height: 1.75;     /* lakše čitanje */
 }
+
+/* sve feature ikone neka budu "block" i iste veličine */
+.feature-item img{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  margin-bottom:10px;
+  display:block;            /* <— važno: uklanja baseline razmak */
+}
+
+/* (opcionalno) zaključaj jednaku visinu “stavke” zbog različite dužine teksta */
+.feature-item{
+  min-height: 140px;        /* prilagodi po ukusu; drži ikonu + 2 reda teksta */
+  text-align:center;
+}
