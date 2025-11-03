@@ -220,13 +220,32 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
 }
 .project-card:hover, .collab-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-1); }
 
-.project-card img{
+/* hero-slike u budućnosti, ali NE logotipi */
+.project-card img:not(.project-logo){
   width:100%;
   aspect-ratio:16/9;
-  object-fit:contain;
+  object-fit:cover;
   background:#f6f9f8;
   padding:16px;
 }
+
+/* logotipi: svi iste visine u kutiji */
+.logo-wrap{
+  height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+}
+.project-logo{
+  max-height:100%;
+  max-width:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  display:block;
+}
+
 .project-body{ padding:16px 16px 18px; background:#fff; }
 
 .collab-card img{ height:68px; margin:18px auto 10px; display:block }
@@ -662,6 +681,7 @@ footer a:hover {
   line-height:1.4;
   font-weight:500;
   /* Minimalni nudge samo za 5. ikonu – po potrebi ukloni */
+.feature-item{ … }
 .feature-item:nth-child(5) img { transform: translateY(1px); }
 
 }
