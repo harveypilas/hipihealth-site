@@ -22,6 +22,12 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
   margin:0 auto;      /* centrira sve unutar stranice */
   padding:0 24px;     /* zrak od ruba */
 }
+/* Bazni container za centriranje sadržaja */
+.container{
+  max-width: 1040px;        /* po potrebi 1000–1120px */
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
 /* ========= Header / brand ========= */
 .site-header{
@@ -630,30 +636,27 @@ footer a:hover {
 .reveal.d2{ animation-delay:.15s }
 .reveal.d3{ animation-delay:.3s }
 
-/* ===== Feature bar (Potion 1st stil) ===== */
+/* Feature bar – grid, poravnanje ikona */
 .feature-bar{
-  background:#b4dcc0; /* pastelno-zelena slična Potion1st */
+  background:#b4dcc0;
   padding:40px 0;
-  text-align:center;
   border-top:1px solid rgba(0,0,0,.05);
   border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .feature-grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
+  display:grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
   gap:28px;
+  align-items:center;
+  justify-items:center;
 }
 
 .feature-item{
-  flex:1 1 140px;
-  max-width:180px;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
+  text-align:center;
   color:#0b3d39;
   font-size:.95rem;
   line-height:1.4;
@@ -663,21 +666,27 @@ footer a:hover {
 .feature-item img{
   width:72px;
   height:72px;
-  object-fit:contain;
+  aspect-ratio:1 / 1;      /* prisilni kvadrat */
+  object-fit:contain;      /* bez izrezivanja */
+  display:block;
   margin-bottom:8px;
+  opacity:.95;
   transition:transform .25s ease, opacity .25s ease;
-  opacity:.9;
 }
-.feature-item:hover img{
-  transform:scale(1.08);
-  opacity:1;
+.feature-item:hover img{ transform:scale(1.08); opacity:1; }
+
+/* Tablet */
+@media (max-width: 1024px){
+  .feature-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 
-@media (max-width:780px){
-  .feature-grid{ gap:18px; }
-  .feature-item{ max-width:140px; font-size:.9rem; }
+/* Mobitel */
+@media (max-width: 640px){
+  .feature-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); gap:18px; }
+  .feature-item{ font-size:.9rem; }
   .feature-item img{ width:64px; height:64px; }
 }
+
 
 /* Partner logos: force color (safety) */
 .partners-logos img,
