@@ -305,7 +305,55 @@ Vizija je pozicionirati Hrvatsku kao europskog predvodnika u području funkciona
       <!-- Lijevo: obrazac -->
       <div class="contact-card">
         <!-- Netlify Forms -->
-        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" action="/thanks.html" class="contact-form">
+       <form
+  name="contact"
+  method="POST"
+  action="/thanks.html"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="contact-form"
+>
+  <!-- obavezno: form-name hidden, MORA odgovarati name="contact" -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <!-- honeypot (skriveno od ljudi) -->
+  <div class="hidden">
+    <label>Ne ispunjavaj ovo: <input name="bot-field" /></label>
+  </div>
+
+  <div class="form-row">
+    <label for="name">Ime i prezime *</label>
+    <input id="name" name="name" type="text" required>
+  </div>
+
+  <div class="form-row">
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div class="form-row">
+    <label for="org">Organizacija (opcionalno)</label>
+    <input id="org" name="organization" type="text" placeholder="Klinika, udruga, tvrtka…">
+  </div>
+
+  <div class="form-row">
+    <label for="message">Poruka *</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <label class="consent">
+    <input type="checkbox" name="consent" required>
+    Slažem se da HIPI Health koristi ove podatke za kontakt u vezi upita. (GDPR)
+  </label>
+
+  <!-- reCAPTCHA widget -->
+  <div data-netlify-recaptcha="true" style="margin: 10px 0;"></div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn">Pošalji poruku</button>
+  </div>
+</form>
+
           <!-- obavezno: skriveni form-name -->
           <input type="hidden" name="form-name" value="contact">
           <!-- honeypot (skriti od ljudi) -->
