@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <link rel="stylesheet" href="/css/style.css?v=3">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HIPI Health – Hrana kao lijek</title>
   <meta name="description" content="HIPI Health – povezujemo kulinarstvo, doktore, nutricioniste i prehrambene tehnologe u svrhu zdravlja probavnog sustava, dugovječnosti i održivog života.">
-
   <link rel="icon" href="/assets/hipi-health-logo.png">
-  <link rel="stylesheet" href="/css/style.css?v=2">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Jedan stil, zadnja verzija -->
+  <link rel="stylesheet" href="/css/style.css?v=3">
+
+  <!-- Jedan skript (radi i na mobitelu) -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#site-nav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    });
+  </script>
 </head>
+
 
   
 <script>
@@ -306,12 +322,12 @@ Vizija je pozicionirati Hrvatsku kao europskog predvodnika u području funkciona
       <div class="contact-card">
         <!-- Netlify Forms -->
        <form
-  name="contact"
-  method="POST"
-  action="/thanks.html"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  class="contact-form"
+         name="contact"
+         method="POST"
+        action="/thanks.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="contact-form"
 >
   <!-- obavezno: form-name hidden, MORA odgovarati name="contact" -->
   <input type="hidden" name="form-name" value="contact">
@@ -354,46 +370,7 @@ Vizija je pozicionirati Hrvatsku kao europskog predvodnika u području funkciona
   </div>
 </form>
 
-          <!-- obavezno: skriveni form-name -->
-          <input type="hidden" name="form-name" value="contact">
-          <!-- honeypot (skriti od ljudi) -->
-          <div class="hidden">
-            <label>Ne ispunjavaj ovo: <input name="bot-field" /></label>
-          </div>
-
-          <div class="form-row">
-            <label for="name">Ime i prezime *</label>
-            <input id="name" name="name" type="text" required>
-          </div>
-
-          <div class="form-row">
-            <label for="email">Email *</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-
-          <div class="form-row">
-            <label for="org">Organizacija (opcionalno)</label>
-            <input id="org" name="organization" type="text" placeholder="Klinika, udruga, tvrtka…">
-          </div>
-
-          <div class="form-row">
-            <label for="message">Poruka *</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-
-          <label class="consent">
-            <input type="checkbox" name="consent" required>
-            Slažem se da HIPI Health koristi ove podatke za kontakt u vezi upita. (GDPR)
-          </label>
-<!-- reCAPTCHA widget -->
-<div data-netlify-recaptcha="true" style="margin: 10px 0;"></div>
-          
-          <div class="form-actions">
-            <button type="submit" class="btn">Pošalji poruku</button>
-          </div>
-        </form>
-        <p class="notice">Ovaj obrazac koristi Netlify Forms – nema dodatne konfiguracije ni backend koda.</p>
-      </div>
+         
 
       <!-- Desno: direktni kontakti -->
       <aside class="contact-side">
