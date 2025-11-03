@@ -729,3 +729,22 @@ footer a:hover {
   min-height: 140px;        /* prilagodi po ukusu; drži ikonu + 2 reda teksta */
   text-align:center;
 }
+
+/* Jedinstvena kutija za sve logo slike u karticama */
+.logo-wrap {
+  height: 92px;             /* ciljna visina logotipa */
+  display: flex;
+  align-items: center;       /* vertikalno centriraj logo */
+  justify-content: center;   /* horizontalno centriraj logo */
+  margin-bottom: 12px;       /* razmak od teksta ispod */
+}
+
+/* Svi logotipi skaliraju se unutar kutije bez deformacije */
+.project-logo {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;       /* zadrži proporcije, bez krojenja */
+  display: block;
+}
