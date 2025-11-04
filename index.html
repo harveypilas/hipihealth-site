@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Jedan stil, zadnja verzija -->
-  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="stylesheet" href="/css/style.css?v=4">
 
   <!-- Jedan skript (radi i na mobitelu) -->
   <script defer>
@@ -277,20 +277,20 @@ Vizija je pozicionirati Hrvatsku kao europskog predvodnika u području funkciona
       <div class="contact-card">
         <!-- Netlify Forms -->
        <form
-         name="contact"
-         method="POST"
-        action="/thanks.html"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        class="contact-form"
+  name="contact"
+  method="POST"
+  action="/thanks.html"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="contact-form"
 >
-  <!-- obavezno: form-name hidden, MORA odgovarati name="contact" -->
+  <!-- obavezno: mora odgovarati name="contact" -->
   <input type="hidden" name="form-name" value="contact">
 
   <!-- honeypot (skriveno od ljudi) -->
-  <div class="hidden">
-    <label>Ne ispunjavaj ovo: <input name="bot-field" /></label>
-  </div>
+  <p class="hidden">
+    <label>Ne ispunjavaj ovo: <input name="bot-field"></label>
+  </p>
 
   <div class="form-row">
     <label for="name">Ime i prezime *</label>
@@ -318,16 +318,14 @@ Vizija je pozicionirati Hrvatsku kao europskog predvodnika u području funkciona
   </label>
 
   <!-- reCAPTCHA widget -->
-  <div data-netlify-recaptcha="true" style="margin: 10px 0;"></div>
+  <div data-netlify-recaptcha="true" style="margin:10px 0;"></div>
 
   <div class="form-actions">
     <button type="submit" class="btn">Pošalji poruku</button>
   </div>
 </form>
 
-         
-
-      <!-- Desno: direktni kontakti -->
+           <!-- Desno: direktni kontakti -->
       <aside class="contact-side">
         <div class="contact-card">
           <h3>Direktan kontakt</h3>
