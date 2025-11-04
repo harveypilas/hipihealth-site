@@ -14,6 +14,18 @@
   --grad-hero: radial-gradient(1300px 700px at 60% -20%, #d1fae5 0%, transparent 50%),
                radial-gradient(900px 600px at -10% 20%, #a7f3d0 0%, transparent 45%);
 }
+/* Global: spriječi horizontalni overflow i crticu s desne strane */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Za svaki slučaj – slike/ikonice nikad šire od spremnika */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
 /* GLOBAL page container (centar + rubni "zrak") */
 .container{
