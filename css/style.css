@@ -771,3 +771,51 @@ footer a:hover {
   .whatsapp-float{ bottom: 88px; left: 18px; }
   .feature-bar{ padding-bottom: 72px; }
 }
+
+/* ===== Mobile tuning za feature ikone ===== */
+
+/* do 640px – 2 stupca, manji gap, manje ikone */
+@media (max-width: 640px){
+  .feature-bar{
+    padding: 28px 0 76px;              /* više zraka gore/dolje + mjesta za WhatsApp gumb */
+  }
+
+  .feature-grid{
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 16px;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .feature-item{
+    padding: 8px 6px;
+    min-height: 110px;                 /* dovoljno za ikonu + 2 reda teksta */
+    font-size: .95rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .feature-item img{
+    width: 56px;
+    height: 56px;
+    margin-bottom: 6px;
+  }
+
+  /* tekst ispod ikone da ne „šeta” po tri reda */
+  .feature-item p{
+    margin: 0;
+    max-width: 16ch;                   /* ~16 znakova širine; podebljaj/olakšaj po ukusu */
+  }
+}
+
+/* vrlo uski telefoni (<=380px) – još malo kompaktnije */
+@media (max-width: 380px){
+  .feature-grid{ gap: 14px; }
+  .feature-item{ font-size: .9rem; }
+  .feature-item img{ width: 50px; height: 50px; }
+}
+
+/* WhatsApp plivajući gumb da ne prekriva ikonu */
+@media (max-width: 640px){
+  .whatsapp-float{ bottom: 88px; left: 18px; }
+}
