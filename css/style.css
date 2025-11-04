@@ -657,33 +657,37 @@ footer a:hover {
 
     /* Feature bar – grid poravnanje + responsivnost */
 
-.feature-bar{
-  background:#b4dcc0;
-  padding:40px 0;
-  border-top:1px solid rgba(0,0,0,.05);
-  border-bottom:1px solid rgba(0,0,0,.05);
+.feature-bar {
+  background: #b4dcc0;
+  padding: 48px 0;                /* simetrično gore i dolje */
+  margin: 0;                      /* makni sve eventualne praznine */
+  border-top: 1px solid rgba(0,0,0,.05);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  box-sizing: border-box;
 }
 
-.feature-grid{
-  display:grid;
-  /* auto-fit lijepo lomi u 6/3/2 ovisno o širini */
+.feature-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap:28px;
-  align-items:start;
-  justify-items:center;
+  gap: 28px;
+  align-items: start;
+  justify-items: center;
+  margin: 0 auto;                 /* centrirano unutar contajnera */
+  max-width: 1040px;              /* ista širina kao .container */
 }
 
-.feature-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  color:#0b3d39;
-  font-size:.95rem;
-  line-height:1.4;
-  font-weight:500;
-  min-height: 130px; /* da sve kartice budu jednako visoke */
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #0b3d39;
+  font-size: .95rem;
+  line-height: 1.4;
+  font-weight: 500;
+  min-height: 130px;
 }
+
 
 .feature-item img{
   width:72px;
