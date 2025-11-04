@@ -397,7 +397,7 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
 
 .notice{ font-size:.85rem; color:#6b7280; margin-top:10px }
 
-/* ===== Partneri – vodoravni layout ===== */
+
 /* ===== Partneri – vodoravni layout ===== */
 .partners-logos {
   display: flex;
@@ -656,6 +656,7 @@ footer a:hover {
 .reveal.d3{ animation-delay:.3s }
 
     /* Feature bar – grid, poravnanje ikona */
+
 .feature-bar{
   background:#b4dcc0;
   padding:40px 0;
@@ -686,7 +687,6 @@ footer a:hover {
   transform: translateY(1px); /* ako želiš taj “nudge” – opcionalno */
 }
 
-
 .feature-item img{
   width:72px;
   height:72px;
@@ -698,6 +698,18 @@ footer a:hover {
   transition:transform .25s ease, opacity .25s ease;
 }
 .feature-item:hover img{ transform:scale(1.08); opacity:1; }
+
+/* Tablet */
+@media (max-width: 1024px){
+  .feature-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+/* Mobitel */
+@media (max-width: 640px){
+  .feature-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); gap:18px; }
+  .feature-item{ font-size:.9rem; }
+  .feature-item img{ width:64px; height:64px; }
+}
 
 /* Tablet */
 @media (max-width: 1024px){
@@ -768,4 +780,9 @@ footer a:hover {
   height: auto;
   object-fit: contain;       /* zadrži proporcije, bez krojenja */
   display: block;
+}
+
+@media (max-width: 640px){
+  .whatsapp-float{ bottom: 88px; left: 18px; }
+  .feature-bar{ padding-bottom: 72px; }
 }
