@@ -667,7 +667,7 @@ footer a:hover {
 .feature-grid{
   display:grid;
   /* auto-fit lijepo lomi u 6/3/2 ovisno o širini */
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap:28px;
   align-items:start;
   justify-items:center;
