@@ -14,16 +14,17 @@
   --grad-hero: radial-gradient(1300px 700px at 60% -20%, #d1fae5 0%, transparent 50%),
                radial-gradient(900px 600px at -10% 20%, #a7f3d0 0%, transparent 45%);
 }
-/* Global: spriječi horizontalni overflow i crticu s desne strane */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+/* Global reset protiv horizontalnog klizanja */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Za svaki slučaj – slike/ikonice nikad šire od spremnika */
-img, svg {
+html, body {
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg)}
@@ -103,12 +104,31 @@ img, svg, video, canvas {
 
 /* ========= Responsive ========= */
 @media (max-width: 860px){
-  .site-header .container{ align-items:flex-start; padding-top:10px; padding-bottom:10px }
-  .nav-toggle{ display:block }
-  .site-nav{
-    display:none;             /* skriveno dok se ne otvori */
-    flex-direction:column; gap:10px; width:100%;
+  .site-header .container{
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+
+  .nav-toggle{
+    display: block;
+  }
+
+  .site-nav{
+    display: none;             /* skriveno dok se ne otvori */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .site-nav.open{
+    display: flex;
+  }
+}
+
+/* ========= Partners ========= */
+
 
 /* ========= Partners ========= */
     
@@ -681,6 +701,7 @@ footer a:hover {
 
     /* Feature bar – grid poravnanje + responsivnost */
 
+/* Feature bar – grid poravnanje + responsivnost */
 .feature-bar {
   position: relative;
   width: 100%;
@@ -689,132 +710,59 @@ footer a:hover {
   margin: 0;
   border-top: 1px solid rgba(0,0,0,.05);
   border-bottom: 1px solid rgba(0,0,0,.05);
-  box-sizing: border-box;   /* rubovi i padding unutar širine */
+  box-sizing: border-box; /* rubovi i padding unutar širine */
 }
-.feature-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap:28px;
-  align-items:start;
-  justify-items:center;
-  margin-left:auto;
-  margin-right:auto;
-  max-width:1040px;         /* usklađeno s .container */
-}
-.feature-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  color:#0b3d39;
-  font-size:.95rem;
-  line-height:1.4;
-  font-weight:500;
-  min-height:130px;
 
-  overflow:hidden;          /* ← spriječi izlazak scale efekta */
+.feature-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 28px;
+  align-items: start;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px; /* usklađeno s .container */
 }
+
+.feature-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #0b3d39;
+  font-size: .95rem;
+  line-height: 1.4;
+  font-weight: 500;
+  min-height: 130px;
+  overflow: hidden;  /* spriječi da scale ikone probije van i napravi scroll */
+}
+
 .feature-item img{
-  width:72px;
-  height:72px;
-  object-fit:contain;
-  display:block;
-  margin-bottom:8px;
-  opacity:.95;
-  transition:transform .25s ease, opacity .25s ease;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 8px;
+  opacity: .95;
+  transition: transform .25s ease, opacity .25s ease;
 }
-.feature-item:hover img{ transform:scale(1.08); opacity:1; }
+
+.feature-item:hover img{
+  transform: scale(1.08);
+  opacity: 1;
+}
 
 /* Tablet */
 @media (max-width: 1024px){
-  .feature-item{ font-size:.92rem; }
-}
-
-/* Mobitel */
-@media (max-width: 640px){
-  .feature-grid{
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    gap:16px;
-  }
-  .feature-item p{
-    margin:0;
-    max-width:16ch;         /* spriječi preduge retke ispod ikone */
+  .feature-item{
+    font-size: .92rem;
   }
 }
 
-  .feature-item img{ width:64px; height:64px; }
-}
-    
-
-/* Partner logos: force color (safety) */
-.partners-logos img,
-.partner-card img {
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
-}
-
-/* ===== Tighter layout on wide screens ===== */
-@media (min-width: 1200px){
-  .container{
-    max-width: 1040px;   /* bilo 1120px; slobodno stavi 1000–1080 po ukusu */
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-/* Dugi pasusi neka budu uži i centrirani (bolja čitljivost) */
-#onama .container p{
-  max-width: 880px;      /* ugodna duljina reda teksta */
-  margin: 0 auto 18px;   /* centriraj + zadrži donji razmak */
-  line-height: 1.75;     /* lakše čitanje */
-}
-
-/* sve feature ikone neka budu "block" i iste veličine */
-.feature-item img{
-  width:72px;
-  height:72px;
-  object-fit:contain;
-  margin-bottom:10px;
-  display:block;            /* <— važno: uklanja baseline razmak */
-}
-
-/* (opcionalno) zaključaj jednaku visinu “stavke” zbog različite dužine teksta */
-.feature-item{
-  min-height: 140px;        /* prilagodi po ukusu; drži ikonu + 2 reda teksta */
-  text-align:center;
-}
-
-/* Jedinstvena kutija za sve logo slike u karticama */
-.logo-wrap {
-  height: 92px;             /* ciljna visina logotipa */
-  display: flex;
-  align-items: center;       /* vertikalno centriraj logo */
-  justify-content: center;   /* horizontalno centriraj logo */
-  margin-bottom: 12px;       /* razmak od teksta ispod */
-}
-
-/* Svi logotipi skaliraju se unutar kutije bez deformacije */
-.project-logo {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;       /* zadrži proporcije, bez krojenja */
-  display: block;
-}
-
-@media (max-width: 640px){
-  .whatsapp-float{ bottom: 88px; left: 18px; }
-  .feature-bar{ padding-bottom: 72px; }
-}
-
-/* ===== Mobile tuning za feature ikone ===== */
-
-/* do 640px – 2 stupca, manji gap, manje ikone */
+/* Mobitel – 2 stupca, kraći tekst */
 @media (max-width: 640px){
   .feature-bar{
-    padding: 28px 0 76px;              /* više zraka gore/dolje + mjesta za WhatsApp gumb */
+    padding: 28px 0 76px; /* malo manji padding + prostor za WhatsApp gumb */
   }
 
   .feature-grid{
@@ -826,10 +774,9 @@ footer a:hover {
 
   .feature-item{
     padding: 8px 6px;
-    min-height: 110px;                 /* dovoljno za ikonu + 2 reda teksta */
+    min-height: 110px;
     font-size: .95rem;
     line-height: 1.35;
-    text-align: center;
   }
 
   .feature-item img{
@@ -838,21 +785,31 @@ footer a:hover {
     margin-bottom: 6px;
   }
 
-  /* tekst ispod ikone da ne „šeta” po tri reda */
   .feature-item p{
     margin: 0;
-    max-width: 16ch;                   /* ~16 znakova širine; podebljaj/olakšaj po ukusu */
+    max-width: 16ch; /* da tekst ne ide u tri kilometra */
   }
 }
 
-/* vrlo uski telefoni (<=380px) – još malo kompaktnije */
+/* Vrlo uski telefoni */
 @media (max-width: 380px){
-  .feature-grid{ gap: 14px; }
-  .feature-item{ font-size: .9rem; }
-  .feature-item img{ width: 50px; height: 50px; }
+  .feature-grid{
+    gap: 14px;
+  }
+  .feature-item{
+    font-size: .9rem;
+  }
+  .feature-item img{
+    width: 50px;
+    height: 50px;
+  }
 }
+
 
 /* WhatsApp plivajući gumb da ne prekriva ikonu */
 @media (max-width: 640px){
   .whatsapp-float{ bottom: 88px; left: 18px; }
+}
+body {
+  overflow-x: hidden;
 }
