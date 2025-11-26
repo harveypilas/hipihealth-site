@@ -717,7 +717,7 @@ footer a:hover {
 .reveal.d3{ animation-delay:.3s }
 
 /* Feature bar – grid poravnanje + responsivnost */
-./* Feature bar – full width bez praznine desno/lijevo */
+/* Feature bar – full width bez praznine desno/lijevo */
 .feature-bar {
   position: relative;
   background: #b4dcc0;
