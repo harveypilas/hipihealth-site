@@ -392,10 +392,34 @@ img, svg, video, canvas {
 .contact-section h2{ color:var(--teal); margin:0 0 8px; text-align:center }
 .contact-lead{ max-width:760px; margin:0 auto 32px; color:#374151; text-align:center }
 
+/* Kontakt grid – jednostavno centriranje forme */
 .contact-grid{
-  display:grid; grid-template-columns: 1.2fr .8fr; gap:24px;
+  display: flex;
+  justify-content: center;
 }
-@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr } }
+
+.contact-card{
+  max-width: 720px;
+  width: 100%;
+}
+
+/* ako nemaš sadržaj u desnom stupcu, sakrij ga */
+.contact-side{
+  display: none;
+}
+
+/* na mobitelu ostaje isto – forma full width */
+@media (max-width: 900px){
+  .contact-grid{
+    display: block;
+  }
+
+  .contact-card{
+    max-width: 100%;
+  }
+}
+
+
 
 .contact-card{
   background:#f9faf9; border:1px solid #e5e7eb; border-radius:16px;
