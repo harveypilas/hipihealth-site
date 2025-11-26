@@ -115,17 +115,19 @@ img, svg, video, canvas {
   }
 
   .site-nav{
-    display: none;             /* skriveno dok se ne otvori */
+    display: none;          /* skriveno dok se ne otvori */
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0;        /* ovo je onaj tvoj padding:10px 0; ali na pravom mjestu */
   }
 
   .site-nav.open{
     display: flex;
   }
 }
+
+/* ========= Partners ========= */
     
 /* ===== Partneri (layout) ===== */
 .partners-section{
