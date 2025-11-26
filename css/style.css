@@ -725,18 +725,18 @@ footer a:hover {
   margin: 0;
   border-top: 1px solid rgba(0,0,0,.05);
   border-bottom: 1px solid rgba(0,0,0,.05);
-  box-sizing: border-box; /* rubovi i padding unutar širine */
+  box-sizing: border-box;
 }
 
 .feature-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));  /* 6 stupaca u jednom redu */
   gap: 28px;
   align-items: start;
   justify-items: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1040px; /* usklađeno s .container */
+  max-width: 1040px;
 }
 
 .feature-item{
@@ -749,7 +749,7 @@ footer a:hover {
   line-height: 1.4;
   font-weight: 500;
   min-height: 130px;
-  overflow: hidden;  /* spriječi da scale ikone probije van i napravi scroll */
+  overflow: hidden;
 }
 
 .feature-item img{
@@ -767,21 +767,24 @@ footer a:hover {
   opacity: 1;
 }
 
-/* Tablet */
+/* Tablet – 3 stupca x 2 reda */
 @media (max-width: 1024px){
+  .feature-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .feature-item{
     font-size: .92rem;
   }
 }
 
-/* Mobitel – 2 stupca, kraći tekst */
+/* Mobitel – 2 stupca */
 @media (max-width: 640px){
   .feature-bar{
-    padding: 28px 0 76px; /* malo manji padding + prostor za WhatsApp gumb */
+    padding: 28px 0 76px;
   }
 
   .feature-grid{
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     justify-items: center;
     align-items: start;
@@ -802,9 +805,9 @@ footer a:hover {
 
   .feature-item p{
     margin: 0;
-    max-width: 16ch; /* da tekst ne ide u tri kilometra */
+    max-width: 16ch;
   }
-} /* ← OVDJE zatvaramo @media 640px za feature-bar */
+}
 
 /* Vrlo uski telefoni */
 @media (max-width: 380px){
@@ -818,16 +821,4 @@ footer a:hover {
     width: 50px;
     height: 50px;
   }
-} /* ← OVDJE zatvaramo @media 380px */
-
-/* WhatsApp plivajući gumb da ne prekriva ikonu */
-@media (max-width: 640px){
-  .whatsapp-float{
-    bottom: 88px;
-    left: 18px;
-  }
-}
-
-body {
-  overflow-x: hidden;
 }
