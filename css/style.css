@@ -717,15 +717,20 @@ footer a:hover {
 .reveal.d3{ animation-delay:.3s }
 
 /* Feature bar – grid poravnanje + responsivnost */
+./* Feature bar – full width bez praznine desno/lijevo */
 .feature-bar {
   position: relative;
-  width: 100%;
   background: #b4dcc0;
   padding: 48px 0;
-  margin: 0;
   border-top: 1px solid rgba(0,0,0,.05);
   border-bottom: 1px solid rgba(0,0,0,.05);
-  box-sizing: border-box;
+
+  /* full-bleed trik */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
 }
 
 .feature-grid{
