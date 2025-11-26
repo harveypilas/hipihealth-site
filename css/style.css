@@ -126,11 +126,6 @@ img, svg, video, canvas {
     display: flex;
   }
 }
-
-/* ========= Partners ========= */
-
-
-/* ========= Partners ========= */
     
 /* ===== Partneri (layout) ===== */
 .partners-section{
@@ -219,11 +214,7 @@ img, svg, video, canvas {
   transform: translateY(-6px) scale(1.02);           /* blagi podizaj */
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);          /* finija sjena */
 }
-   
-    padding:10px 0;
-  }
-  .site-nav.open{ display:flex }
-}
+
 /* ===== Projekti ===== */
 .projects-section{
   padding: 72px 0;
@@ -699,8 +690,6 @@ footer a:hover {
 .reveal.d2{ animation-delay:.15s }
 .reveal.d3{ animation-delay:.3s }
 
-    /* Feature bar – grid poravnanje + responsivnost */
-
 /* Feature bar – grid poravnanje + responsivnost */
 .feature-bar {
   position: relative;
@@ -789,7 +778,7 @@ footer a:hover {
     margin: 0;
     max-width: 16ch; /* da tekst ne ide u tri kilometra */
   }
-}
+} /* ← OVDJE zatvaramo @media 640px za feature-bar */
 
 /* Vrlo uski telefoni */
 @media (max-width: 380px){
@@ -803,13 +792,16 @@ footer a:hover {
     width: 50px;
     height: 50px;
   }
-}
-
+} /* ← OVDJE zatvaramo @media 380px */
 
 /* WhatsApp plivajući gumb da ne prekriva ikonu */
 @media (max-width: 640px){
-  .whatsapp-float{ bottom: 88px; left: 18px; }
+  .whatsapp-float{
+    bottom: 88px;
+    left: 18px;
+  }
 }
+
 body {
   overflow-x: hidden;
 }
