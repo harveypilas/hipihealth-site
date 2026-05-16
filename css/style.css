@@ -226,10 +226,10 @@ img, svg, video, canvas {
 .projects-lead{ max-width:780px; margin:0 auto 28px; color:#374151; text-align:center }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 24px;
-  align-items: stretch; /* sve kartice iste visine */
+  flex-wrap: wrap;
 }
 @media (max-width: 980px){
   .projects-grid{ grid-template-columns: repeat(2, minmax(0,1fr)) }
@@ -255,7 +255,14 @@ img, svg, video, canvas {
   background: linear-gradient(180deg, rgba(16,185,129,.18), transparent 45%);
   opacity:.6;
 }
-.project-card:hover, .collab-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-1); }
+.project-card:hover, .collab-card:hover{ 
+  transform: translateY(-2px); 
+  box-shadow: var(--shadow-1); 
+}
+.project-card{
+  max-width: 420px;
+  width: 100%;
+}
 
 /* hero-slike u budućnosti, ali NE logotipi */
 .project-card img:not(.project-logo){
