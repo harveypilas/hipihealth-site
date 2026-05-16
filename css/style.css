@@ -281,13 +281,18 @@ img, svg, video, canvas {
   justify-content:center;
   margin-bottom:12px;
 }
-.project-logo{
-  max-height:100%;
-  max-width:100%;
-  width:auto;
-  height:auto;
-  object-fit:contain;
-  display:block;
+.project-logo {
+  max-height: 140px;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-card:first-child .project-logo{
+  max-height: 190px;
 }
 
 .project-body{ padding:16px 16px 18px; background:#fff; }
