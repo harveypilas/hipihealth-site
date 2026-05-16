@@ -1059,3 +1059,98 @@ footer a:hover {
     line-height: 1.65;
   }
 }
+
+/* ===== FINAL OVERRIDE: Papillon premium background ===== */
+
+#projekti.papillon-project-section,
+section#projekti.projects-section{
+  position: relative;
+  padding: 110px 0 90px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.86) 42%,
+      rgba(255,255,255,.38) 100%
+    ),
+    url("/assets/papillon-section-bg.png.png") center right / cover no-repeat !important;
+  overflow: hidden;
+}
+
+#projekti .project-card{
+  max-width: 880px;
+  margin: 0 auto;
+  border-radius: 28px;
+  background: rgba(255,255,255,.76);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 24px 70px rgba(17,94,89,.16);
+}
+
+#projekti .logo-wrap{
+  height: 210px;
+  padding-top: 46px;
+  padding-bottom: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#projekti .project-logo{
+  max-width: 78%;
+  max-height: 160px;
+  object-fit: contain;
+  display:block;
+  margin: 0 auto;
+}
+
+#projekti .project-body{
+  text-align: center;
+  padding: 26px 42px 38px;
+}
+
+#projekti .meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+#projekti .actions{
+  display:flex;
+  justify-content:center;
+}
+
+@media (max-width:700px){
+  #projekti.papillon-project-section,
+  section#projekti.projects-section{
+    padding: 72px 0 64px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96),
+        rgba(255,255,255,.78)
+      ),
+      url("/assets/papillon-section-bg.png.png") center / cover no-repeat !important;
+  }
+
+  #projekti .project-card{
+    max-width: 94%;
+    border-radius: 22px;
+  }
+
+  #projekti .logo-wrap{
+    height: 165px;
+    padding-top: 28px;
+  }
+
+  #projekti .project-logo{
+    max-height: 120px;
+    max-width: 88%;
+  }
+
+  #projekti .project-body{
+    padding: 22px 22px 28px;
+  }
+}
