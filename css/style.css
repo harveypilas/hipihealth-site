@@ -1319,3 +1319,47 @@ section#projekti.projects-section{
     margin-right:auto;
   }
 }
+/* ===== Papillon visual polish ===== */
+
+.papillon-spotlight{
+  background:
+    radial-gradient(900px 500px at 82% 45%, rgba(180,220,192,.25), transparent 65%),
+    linear-gradient(90deg, #f7f3e9 0%, #fbf8ef 100%);
+}
+
+.papillon-visual{
+  position:relative;
+}
+
+.papillon-visual::before{
+  content:"";
+  position:absolute;
+  inset:10% 2% 8% 8%;
+  background:rgba(180,220,192,.22);
+  filter:blur(50px);
+  border-radius:999px;
+  z-index:0;
+}
+
+.papillon-visual img{
+  position:relative;
+  z-index:1;
+  transform:scale(1.04);
+  border-radius:36px;
+}
+
+.papillon-points{
+  display:grid;
+  gap:10px;
+}
+
+.papillon-points li{
+  font-size:1.02rem;
+}
+
+.papillon-points li::before{
+  content:"✓";
+  color:#6f7f3c;
+  margin-right:10px;
+  font-weight:700;
+}
