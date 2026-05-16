@@ -275,14 +275,14 @@ img, svg, video, canvas {
 
 /* logotipi: svi iste visine u kutiji */
 .logo-wrap{
-  height:92px;
+  height:160px;
   display:flex;
   align-items:center;
   justify-content:center;
   margin-bottom:12px;
 }
 .project-logo {
-  max-height: 140px;
+  max-height: 150px;
   max-width: 90%;
   width: auto;
   height: auto;
