@@ -839,3 +839,204 @@ footer a:hover {
     height: 50px;
   }
 }
+/* ===== Premium Papillon section ===== */
+
+.papillon-project-section{
+  position: relative;
+  padding: 90px 0 80px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.88) 42%,
+      rgba(255,255,255,.45) 100%
+    ),
+    url("/assets/papillon-section-bg.png") center right / cover no-repeat;
+
+  overflow: hidden;
+}
+
+.papillon-project-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      700px 360px at 20% 20%,
+      rgba(236,253,245,.65),
+      transparent 70%
+    ),
+
+    radial-gradient(
+      600px 320px at 80% 70%,
+      rgba(180,220,192,.35),
+      transparent 65%
+    );
+
+  pointer-events:none;
+}
+
+.papillon-project-section .container{
+  position: relative;
+  z-index: 1;
+}
+
+.papillon-project-section .projects-grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.papillon-card{
+  width:100%;
+  max-width: 760px;
+
+  border-radius: 28px;
+
+  border:1px solid rgba(255,255,255,.75);
+
+  background: rgba(255,255,255,.72);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 24px 70px rgba(17,94,89,.16);
+
+  overflow:hidden;
+}
+
+.papillon-logo-wrap{
+  height: 220px;
+
+  padding-top: 40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(236,253,245,.72),
+      rgba(255,255,255,.15)
+    );
+}
+
+.papillon-logo{
+  max-width: 82%;
+  max-height: 160px;
+
+  object-fit: contain;
+
+  display:block;
+  margin:0 auto;
+}
+
+.papillon-card .project-body{
+  padding: 26px 42px 38px;
+}
+
+.papillon-card .project-body h3{
+  text-align:center;
+
+  font-size: 1.5rem;
+
+  color:#0f5f55;
+
+  margin-bottom: 16px;
+}
+
+.papillon-card .project-body p{
+  text-align:center;
+
+  font-size: 1.05rem;
+
+  line-height: 1.75;
+
+  color:#334155;
+
+  margin-bottom: 22px;
+}
+
+.project-meta-centered{
+  justify-content:center;
+  gap:12px;
+
+  margin: 8px 0 24px;
+}
+
+.project-meta-centered li{
+  background: rgba(255,255,255,.6);
+
+  border:1px solid rgba(95,118,45,.28);
+
+  color:#5f762d;
+
+  padding:7px 14px;
+
+  border-radius:999px;
+}
+
+.project-actions-centered{
+  justify-content:center;
+}
+
+.papillon-btn{
+  background:#5f762d;
+
+  border-radius:14px;
+
+  padding:14px 26px;
+
+  box-shadow:
+    0 14px 34px rgba(95,118,45,.24);
+}
+
+.papillon-btn:hover{
+  background:#4f6425;
+}
+
+/* Mobile */
+
+@media (max-width: 700px){
+
+  .papillon-project-section{
+
+    padding: 68px 0 60px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96),
+        rgba(255,255,255,.80)
+      ),
+
+      url("/assets/papillon-section-bg.png") center / cover no-repeat;
+  }
+
+  .papillon-card{
+    max-width: 94%;
+    border-radius: 22px;
+  }
+
+  .papillon-logo-wrap{
+    height: 160px;
+    padding-top: 24px;
+  }
+
+  .papillon-logo{
+    max-width: 88%;
+    max-height: 120px;
+  }
+
+  .papillon-card .project-body{
+    padding: 22px 22px 28px;
+  }
+
+  .papillon-card .project-body p{
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+}
