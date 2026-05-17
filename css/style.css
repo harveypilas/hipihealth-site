@@ -1416,3 +1416,65 @@ section#projekti.projects-section{
     text-align:center;
   }
 }
+/* ===== Papillon section alignment fix ===== */
+
+.papillon-spotlight{
+  padding:110px 0;
+  background:#f7f3e9;
+}
+
+.papillon-grid{
+  width:min(1180px,92%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:72px;
+  align-items:center;
+}
+
+.papillon-content{
+  max-width:540px;
+}
+
+.papillon-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.papillon-visual img{
+  width:100%;
+  max-width:640px;
+  border-radius:32px;
+  box-shadow:0 28px 70px rgba(0,0,0,.12);
+}
+
+.papillon-content h2{
+  margin-bottom:18px;
+}
+
+.papillon-text{
+  max-width:520px;
+}
+
+@media(max-width:980px){
+  .papillon-grid{
+    grid-template-columns:1fr;
+    gap:44px;
+    text-align:center;
+  }
+
+  .papillon-content{
+    max-width:680px;
+    margin:0 auto;
+  }
+
+  .papillon-text{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .papillon-visual img{
+    max-width:92%;
+  }
+}
