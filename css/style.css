@@ -376,6 +376,8 @@ img, svg, video, canvas {
 .btn-outline{
   background:transparent; color:var(--teal);
   border:1.5px solid #99f6e4;
+  background: rgba(255,255,255,.55);
+backdrop-filter: blur(8px);
 }
 .btn-outline:hover{ background:#ecfdf5; }
 
@@ -1296,6 +1298,8 @@ section#projekti.projects-section{
   width:100%;
   border-radius:34px;
   box-shadow:0 30px 80px rgba(0,0,0,.16);
+  padding: 110px 0 90px;
+  transform: translateY(12px);
 }
 
 .hero-actions{
