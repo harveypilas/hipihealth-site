@@ -1478,3 +1478,32 @@ section#projekti.projects-section{
     max-width:92%;
   }
 }
+.hero-proof{
+  display:flex;
+  gap:14px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+
+.proof-item{
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(11,61,57,.08);
+  border-radius:18px;
+  padding:14px 16px;
+  min-width:180px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.proof-item strong{
+  display:block;
+  color:#0b3d39;
+  font-size:.95rem;
+  margin-bottom:4px;
+}
+
+.proof-item span{
+  font-size:.84rem;
+  line-height:1.45;
+  color:#5d6b67;
+}
