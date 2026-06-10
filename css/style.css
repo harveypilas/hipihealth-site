@@ -1599,3 +1599,63 @@ section#projekti.projects-section{
     max-width: 94%;
   }
 }
+
+/* ===== Collaboration cards polish ===== */
+
+.collab-card{
+  padding: 34px 28px 30px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(236,253,245,.55), rgba(255,255,255,.92));
+  border: 1px solid rgba(17,94,89,.10);
+  box-shadow:
+    0 18px 50px rgba(17,94,89,.08),
+    0 1px 2px rgba(0,0,0,.04);
+}
+
+.collab-card img{
+  width: 190px;
+  height: 135px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 26px;
+  border-radius: 18px;
+  background: rgba(247,243,233,.72);
+  padding: 10px;
+}
+
+.collab-card h3{
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.collab-card p{
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 320px;
+  margin: 0 auto 22px;
+}
+
+.collab-card .meta{
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.collab-card:hover{
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 60px rgba(17,94,89,.12),
+    0 2px 6px rgba(0,0,0,.05);
+}
+
+@media(max-width:700px){
+  .collab-card img{
+    width: 170px;
+    height: 120px;
+  }
+
+  .collab-card{
+    padding: 30px 22px;
+  }
+}
