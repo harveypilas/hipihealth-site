@@ -1659,3 +1659,62 @@ section#projekti.projects-section{
     padding: 30px 22px;
   }
 }
+
+/* ===== About section premium polish ===== */
+
+#onama{
+  padding: 96px 0 92px;
+  background: #fffdf8;
+}
+
+#onama h2{
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 28px;
+}
+
+#onama .container > p{
+  max-width: 860px;
+  margin: 0 auto 34px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #425056;
+  text-align: left;
+}
+
+.mission-card{
+  max-width: 860px;
+  margin: 42px auto 0;
+  padding: 34px 44px;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(247,243,233,.96), rgba(255,255,255,.92));
+  border: 1px solid rgba(17,94,89,.12);
+  box-shadow: 0 24px 70px rgba(17,94,89,.08);
+}
+
+.mission-pill{
+  background: rgba(180,220,192,.45);
+  border: 1px solid rgba(17,94,89,.16);
+  color: #123c35;
+}
+
+.mission-lead{
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: #263a37;
+}
+
+@media(max-width:700px){
+  #onama{
+    padding: 72px 0;
+  }
+
+  #onama .container > p{
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .mission-card{
+    padding: 28px 24px;
+  }
+}
