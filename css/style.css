@@ -1718,3 +1718,100 @@ section#projekti.projects-section{
     padding: 28px 24px;
   }
 }
+
+/* ===== Mission ribbon: Papillon-style soft melt ===== */
+
+.mission-card{
+  position: relative;
+  overflow: hidden;
+  max-width: 920px;
+  margin: 44px auto 0;
+  padding: 38px 52px;
+  border-radius: 34px;
+  background:
+    radial-gradient(700px 180px at 18% 0%, rgba(180,220,192,.34), transparent 70%),
+    radial-gradient(600px 220px at 92% 100%, rgba(222,196,137,.24), transparent 72%),
+    linear-gradient(135deg, rgba(255,252,244,.96), rgba(247,243,233,.94));
+  border: 1px solid rgba(22,60,53,.10);
+  box-shadow:
+    0 26px 70px rgba(22,60,53,.08),
+    inset 0 1px 0 rgba(255,255,255,.75);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.mission-card::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(142,159,83,.13), transparent 34%),
+    radial-gradient(circle at 70% 65%, rgba(236,203,137,.16), transparent 36%);
+  filter: blur(34px);
+  opacity:.8;
+  pointer-events:none;
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+.mission-card::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:33px;
+  border:1px solid rgba(255,255,255,.45);
+  pointer-events:none;
+}
+
+.mission-card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(22,60,53,.18);
+  box-shadow:
+    0 34px 90px rgba(22,60,53,.13),
+    0 10px 30px rgba(222,196,137,.10),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+.mission-card:hover::before{
+  opacity:1;
+  transform: scale(1.04);
+}
+
+.mission-pill{
+  position: relative;
+  z-index:1;
+  display:inline-block;
+  margin-bottom:18px;
+  padding: 7px 16px;
+  border-radius:999px;
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(22,60,53,.13);
+  color:#163c35;
+  letter-spacing:.12em;
+  font-size:.78rem;
+  font-weight:700;
+  box-shadow:0 8px 22px rgba(22,60,53,.06);
+}
+
+.mission-lead{
+  position: relative;
+  z-index:1;
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color:#243b36;
+}
+
+.mission-lead strong{
+  color:#123c35;
+}
+
+@media(max-width:700px){
+  .mission-card{
+    padding: 30px 24px;
+    border-radius: 28px;
+  }
+
+  .mission-lead{
+    font-size:1.04rem;
+  }
+}
