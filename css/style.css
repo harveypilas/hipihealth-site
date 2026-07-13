@@ -2789,3 +2789,333 @@ section#projekti.projects-section{
     font-size: 1.25rem;
   }
 }
+/* =========================================================
+   HIPI FINAL LOCK v12
+   Hero + Partners readability fix
+   ========================================================= */
+
+/* HERO: clean centered layout */
+
+#pocetna.hero{
+  padding: 96px 0 78px;
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(180,220,192,.30), transparent 68%),
+    linear-gradient(180deg, #fffdf8 0%, #f8faf8 100%) !important;
+}
+
+#pocetna .hero-shell{
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#pocetna .hero-eyebrow{
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #425056;
+  font-size: .98rem;
+  letter-spacing: .02em;
+  font-weight: 650;
+}
+
+#pocetna h1{
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 5.7vw, 5rem);
+  line-height: 1.05;
+  color: #0b3d39;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  letter-spacing: -.04em;
+}
+
+#pocetna .hero-text{
+  max-width: 900px;
+  margin: 0 auto 34px;
+  color: #425056;
+  font-size: 1.17rem;
+  line-height: 1.75;
+}
+
+#pocetna .hero-actions{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto 44px;
+}
+
+#pocetna .hero-actions .btn{
+  min-width: 210px;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 15px 22px;
+}
+
+#pocetna .hero-proof-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#pocetna .hero-proof-card{
+  display: block;
+  min-height: 168px;
+  padding: 28px 26px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(17,94,89,.12);
+  box-shadow:
+    0 20px 55px rgba(17,94,89,.09),
+    0 1px 2px rgba(0,0,0,.04);
+  text-align: left;
+}
+
+#pocetna .hero-proof-card strong{
+  display: block;
+  color: #123c35;
+  font-size: 1.28rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+#pocetna .hero-proof-card span{
+  display: block;
+  color: #5b6772;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* PARTNERS: readable premium cards */
+
+#partneri.partners-section{
+  padding: 102px 0;
+  background:
+    radial-gradient(850px 380px at 50% 0%, rgba(180,220,192,.24), transparent 70%),
+    #f8faf8 !important;
+}
+
+#partneri.partners-section h2{
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  line-height: 1.05;
+  color: #0b3d39;
+  margin: 0 0 18px;
+}
+
+#partneri.partners-section > .container > p{
+  max-width: 880px;
+  margin: 0 auto 52px;
+  text-align: center;
+  color: #425056;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+/* 6-column grid:
+   first 3 cards span 2 columns = top row
+   featured cards span 3 columns = larger bottom row
+*/
+
+#partneri .partners-logos{
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1180px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+#partneri .partner-card{
+  grid-column: span 2;
+  min-height: 230px;
+  max-width: none !important;
+  padding: 30px 28px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(17,94,89,.12);
+  box-shadow:
+    0 20px 55px rgba(17,94,89,.09),
+    0 1px 2px rgba(0,0,0,.04);
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+#partneri .partner-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(17,94,89,.22);
+  box-shadow:
+    0 28px 76px rgba(17,94,89,.15),
+    0 2px 6px rgba(0,0,0,.05);
+}
+
+#partneri .partner-card--featured{
+  grid-column: span 3;
+  min-height: 310px;
+  padding: 36px 34px;
+  background:
+    radial-gradient(520px 220px at 50% 0%, rgba(180,220,192,.22), transparent 70%),
+    rgba(255,255,255,.96);
+}
+
+/* Reset old global image rules that were shrinking partner logos */
+
+#partneri .partner-card img,
+#partneri .partners-logos img,
+#partneri .partner-img{
+  height: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#partneri .partner-img--potion{
+  max-height: 96px !important;
+}
+
+#partneri .partner-img--healing{
+  max-height: 88px !important;
+}
+
+#partneri .partner-img--medri{
+  max-height: 82px !important;
+}
+
+#partneri .partner-img--hliga{
+  max-height: 185px !important;
+}
+
+#partneri .partner-img--tihi{
+  max-height: 175px !important;
+}
+
+#partneri .partner-name{
+  display: block;
+  max-width: 32ch;
+  color: #123c35;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -.01em;
+}
+
+#partneri .partner-card--featured .partner-name{
+  font-size: 1.22rem;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px){
+  #pocetna .hero-proof-grid{
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  #partneri .partners-logos{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 860px;
+  }
+
+  #partneri .partner-card,
+  #partneri .partner-card--featured{
+    grid-column: span 1;
+    min-height: 250px;
+  }
+
+  #partneri .partner-img--hliga{
+    max-height: 165px !important;
+  }
+
+  #partneri .partner-img--tihi{
+    max-height: 155px !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px){
+  #pocetna.hero{
+    padding: 74px 0 60px;
+  }
+
+  #pocetna h1{
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
+  }
+
+  #pocetna .hero-text{
+    font-size: 1.04rem;
+    line-height: 1.7;
+  }
+
+  #pocetna .hero-actions{
+    flex-direction: column;
+  }
+
+  #pocetna .hero-actions .btn{
+    width: 100%;
+    max-width: 330px;
+  }
+
+  #pocetna .hero-proof-card{
+    min-height: auto;
+    padding: 24px 22px;
+    border-radius: 24px;
+  }
+
+  #partneri.partners-section{
+    padding: 78px 0;
+  }
+
+  #partneri .partners-logos{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #partneri .partner-card,
+  #partneri .partner-card--featured{
+    min-height: 230px;
+    padding: 28px 22px;
+    border-radius: 26px;
+  }
+
+  #partneri .partner-img--potion{
+    max-height: 82px !important;
+  }
+
+  #partneri .partner-img--healing{
+    max-height: 76px !important;
+  }
+
+  #partneri .partner-img--medri{
+    max-height: 72px !important;
+  }
+
+  #partneri .partner-img--hliga{
+    max-height: 155px !important;
+  }
+
+  #partneri .partner-img--tihi{
+    max-height: 145px !important;
+  }
+
+  #partneri .partner-name,
+  #partneri .partner-card--featured .partner-name{
+    font-size: 1rem;
+  }
+}
