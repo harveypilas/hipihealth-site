@@ -3205,3 +3205,16 @@ section#projekti.projects-section{
     border-radius: 22px;
   }
 }
+/* ===== PARTNERS - HIDE VISIBLE NAMES UNDER LOGOS ===== */
+
+#partneri .partner-name{
+  display: none !important;
+}
+
+#partneri .partner-card{
+  gap: 0 !important;
+}
+
+#partneri .partner-card--featured{
+  justify-content: center !important;
+}
