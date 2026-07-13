@@ -3119,3 +3119,89 @@ section#projekti.projects-section{
     font-size: 1rem;
   }
 }
+/* ===== ABOUT SECTION - HIPI FINAL TONE ===== */
+
+#onama{
+  padding: 104px 0 96px;
+  background:
+    radial-gradient(760px 340px at 50% 0%, rgba(180,220,192,.20), transparent 70%),
+    #fffdf8;
+}
+
+#onama h2{
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  color: #0b3d39;
+  text-align: center;
+  margin: 0 0 34px;
+}
+
+#onama .container > p{
+  max-width: 920px;
+  margin: 0 auto 22px;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #425056;
+  text-align: left;
+}
+
+#onama .container > p strong{
+  color: #123c35;
+  font-weight: 850;
+}
+
+.about-focus-grid{
+  max-width: 1120px;
+  margin: 42px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 24px;
+}
+
+.about-focus-card{
+  padding: 28px 26px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(17,94,89,.12);
+  box-shadow:
+    0 20px 55px rgba(17,94,89,.08),
+    0 1px 2px rgba(0,0,0,.04);
+}
+
+.about-focus-card h3{
+  margin: 0 0 12px;
+  color: #123c35;
+  font-size: 1.22rem;
+  line-height: 1.25;
+}
+
+.about-focus-card p{
+  margin: 0;
+  color: #5b6772;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@media(max-width: 900px){
+  .about-focus-grid{
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+}
+
+@media(max-width: 640px){
+  #onama{
+    padding: 78px 0;
+  }
+
+  #onama .container > p{
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-focus-card{
+    padding: 24px 22px;
+    border-radius: 22px;
+  }
+}
