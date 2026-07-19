@@ -3471,3 +3471,40 @@ section#projekti.projects-section{
     margin-top: -6px;
   }
 }
+
+/* ===== BLOG ARTICLE INLINE IMAGES ===== */
+
+.article-figure {
+  margin: 42px 0;
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(17, 94, 89, 0.10);
+}
+
+.article-figure figcaption {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .article-figure {
+    margin: 32px 0;
+  }
+
+  .article-figure img {
+    border-radius: 18px;
+  }
+
+  .article-figure figcaption {
+    font-size: 0.84rem;
+  }
+}
