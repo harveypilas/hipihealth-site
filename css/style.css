@@ -3542,3 +3542,24 @@ section#projekti.projects-section{
     line-height: 1.32;
   }
 }
+
+/* ===== BLOG ARCHIVE TITLES - FINAL FIX ===== */
+
+.blog-archive-page .blog-grid .post-card .post-card-title {
+  font-family: var(--sans) !important;
+  font-size: 1.28rem !important;
+  line-height: 1.32 !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.01em !important;
+  color: #123c35 !important;
+  text-align: left !important;
+  margin: 0 0 14px !important;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (max-width: 640px) {
+  .blog-archive-page .blog-grid .post-card .post-card-title {
+    font-size: 1.18rem !important;
+  }
+}
