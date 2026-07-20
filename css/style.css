@@ -4280,3 +4280,129 @@ section#projekti.projects-section{
     min-height: 146px !important;
   }
 }
+
+/* =====================================================
+   HIPI HEALTH JOURNAL — PREMIUM CARD GRID
+===================================================== */
+
+#blog.blog-section{
+  padding: 108px 0 112px;
+  background:
+    radial-gradient(
+      900px 420px at 50% 0%,
+      rgba(180,220,192,.20),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #f8faf8 0%, #fffdf8 100%);
+}
+
+#blog .blog-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 30px !important;
+  max-width: 1100px;
+  margin: 42px auto 0 !important;
+}
+
+#blog .post-card{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 !important;
+  overflow: hidden;
+
+  border-radius: 30px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(17,94,89,.10);
+
+  box-shadow:
+    0 20px 55px rgba(17,94,89,.08),
+    0 1px 2px rgba(0,0,0,.04);
+}
+
+#blog .post-card > img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+}
+
+#blog .post-body{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px 30px 32px;
+}
+
+#blog .post-meta-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+#blog .post-category{
+  margin: 0;
+  padding: 6px 12px;
+  background: rgba(180,220,192,.25);
+  border: 1px solid rgba(17,94,89,.14);
+  color: #0f766e;
+}
+
+#blog .reading-time{
+  color: #718078;
+  font-size: .83rem;
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+#blog .post-card h3,
+#blog .post-card-title{
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  line-height: 1.16;
+  letter-spacing: -.025em;
+  margin: 0 0 16px;
+  color: #123c35;
+}
+
+#blog .post-card p{
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #52605c;
+}
+
+#blog .read-more{
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+#blog .post-card:hover{
+  transform: translateY(-7px);
+  box-shadow:
+    0 32px 80px rgba(17,94,89,.13),
+    0 10px 26px rgba(222,196,137,.08);
+}
+
+@media(max-width: 760px){
+  #blog.blog-section{
+    padding: 82px 0 88px;
+  }
+
+  #blog .blog-grid{
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  #blog .post-body{
+    padding: 25px 23px 28px;
+  }
+
+  #blog .post-card h3,
+  #blog .post-card-title{
+    font-size: 1.55rem;
+  }
+}
