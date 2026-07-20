@@ -14,19 +14,6 @@
   <!-- Jedan stil, zadnja verzija -->
   <link rel="stylesheet" href="/css/style.css?v=15">
 
-  <!-- Jedan skript (radi i na mobitelu) -->
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('#site-nav');
-      if (btn && nav) {
-        btn.addEventListener('click', () => {
-          const open = nav.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-      }
-    });
-  </script>
 </head>
   <body>
  <header class="site-header">
@@ -601,6 +588,45 @@
         alt="WhatsApp logo">
    
 </a>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".nav-toggle");
+    const navigation = document.getElementById("site-nav");
 
+    if (!menuButton || !navigation) {
+      return;
+    }
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      menuButton.classList.toggle("is-open", isOpen);
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("open");
+        menuButton.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 980) {
+        navigation.classList.remove("open");
+        menuButton.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
 </html>
 
