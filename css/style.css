@@ -3974,3 +3974,247 @@ section#projekti.projects-section{
     transform: translateY(-7px) rotate(-45deg);
   }
 }
+
+/* =====================================================
+   HIPI FEATURE PRINCIPLES — PREMIUM FINAL OVERRIDE
+===================================================== */
+
+.feature-bar{
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 84px 24px !important;
+
+  background:
+    radial-gradient(
+      760px 280px at 50% 0%,
+      rgba(180,220,192,.20),
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #f8faf8 100%
+    ) !important;
+
+  border-top: 1px solid rgba(18,60,53,.06);
+  border-bottom: 1px solid rgba(18,60,53,.06);
+
+  overflow: hidden;
+}
+
+.feature-bar::before{
+  content: "Načela našeg pristupa";
+  display: block;
+
+  max-width: 1180px;
+  margin: 0 auto 34px;
+
+  color: #6d7c70;
+  text-align: center;
+
+  font-size: .78rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.feature-grid{
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+
+  align-items: stretch !important;
+}
+
+.feature-item{
+  position: relative;
+
+  min-height: 190px !important;
+  padding: 30px 24px 26px !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: #123c35 !important;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      260px 120px at 50% 0%,
+      rgba(180,220,192,.19),
+      transparent 74%
+    ),
+    rgba(255,255,255,.90);
+
+  border: 1px solid rgba(17,94,89,.10);
+  border-radius: 26px;
+
+  box-shadow:
+    0 18px 50px rgba(17,94,89,.07),
+    0 1px 2px rgba(0,0,0,.035);
+
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease,
+    background .28s ease;
+}
+
+.feature-item::after{
+  content: "";
+  position: absolute;
+  inset: 1px;
+
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,.58);
+
+  pointer-events: none;
+}
+
+.feature-item img{
+  position: relative;
+  z-index: 1;
+
+  width: 76px !important;
+  height: 76px !important;
+
+  object-fit: contain;
+  margin: 0 auto 20px !important;
+  padding: 0 !important;
+
+  opacity: .90;
+
+  transition:
+    transform .30s ease,
+    opacity .30s ease,
+    filter .30s ease;
+}
+
+.feature-item p{
+  position: relative;
+  z-index: 1;
+
+  max-width: 20ch !important;
+  margin: 0 !important;
+
+  color: #163c35;
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.feature-item:hover{
+  transform: translateY(-6px);
+
+  background:
+    radial-gradient(
+      280px 140px at 50% 0%,
+      rgba(180,220,192,.30),
+      transparent 75%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255,253,248,.98),
+      rgba(247,243,233,.96)
+    );
+
+  border-color: rgba(22,60,53,.18);
+
+  box-shadow:
+    0 28px 72px rgba(22,60,53,.12),
+    0 8px 24px rgba(222,196,137,.08);
+}
+
+.feature-item:hover img{
+  transform: translateY(-3px) scale(1.07);
+  opacity: 1;
+}
+
+/* Tablet */
+
+@media (max-width: 980px){
+
+  .feature-bar{
+    padding: 72px 24px !important;
+  }
+
+  .feature-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .feature-item{
+    min-height: 180px !important;
+  }
+}
+
+/* Mobitel */
+
+@media (max-width: 640px){
+
+  .feature-bar{
+    padding: 64px 18px 84px !important;
+  }
+
+  .feature-bar::before{
+    margin-bottom: 26px;
+    font-size: .72rem;
+  }
+
+  .feature-grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .feature-item{
+    min-height: 150px !important;
+    padding: 24px 20px !important;
+
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    column-gap: 18px;
+
+    justify-items: start;
+    text-align: left;
+  }
+
+  .feature-item img{
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 !important;
+  }
+
+  .feature-item p{
+    max-width: none !important;
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Korisnici koji ne žele animacije */
+
+@media (prefers-reduced-motion: reduce){
+
+  .feature-item,
+  .feature-item img{
+    transition: none !important;
+  }
+
+  .feature-item:hover{
+    transform: none;
+  }
+}
