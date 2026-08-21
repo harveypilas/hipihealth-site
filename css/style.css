@@ -4540,3 +4540,160 @@ section#projekti.projects-section{
     max-height: 125px !important;
   }
 }
+
+/* =====================================================
+   PARTNERS — CLEAN 2x2 FINAL LAYOUT
+===================================================== */
+
+#partneri .partners-logos{
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr)) !important;
+
+  gap: 26px !important;
+
+  width: 100%;
+  max-width: 1040px;
+
+  margin: 46px auto 0 !important;
+}
+
+/* Sve četiri kartice jednake */
+
+#partneri .partner-card,
+#partneri .partner-card--featured{
+  grid-column: auto !important;
+
+  width: 100%;
+  min-height: 230px !important;
+
+  padding: 32px 28px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      420px 180px at 50% 0%,
+      rgba(180,220,192,.14),
+      transparent 72%
+    ),
+    rgba(255,255,255,.94);
+
+  border: 1px solid rgba(17,94,89,.10);
+
+  box-shadow:
+    0 20px 55px rgba(17,94,89,.08),
+    0 1px 2px rgba(0,0,0,.035);
+
+  transition:
+    transform .26s ease,
+    box-shadow .26s ease,
+    border-color .26s ease;
+}
+
+/* Premium hover */
+
+#partneri .partner-card:hover,
+#partneri .partner-card--featured:hover{
+  transform: translateY(-6px);
+
+  border-color: rgba(22,60,53,.17);
+
+  box-shadow:
+    0 30px 76px rgba(17,94,89,.12),
+    0 10px 28px rgba(222,196,137,.08);
+}
+
+/* Logo centriranje */
+
+#partneri .partner-card img{
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 82% !important;
+  max-height: 125px !important;
+
+  margin: auto !important;
+
+  object-fit: contain !important;
+
+  background: transparent !important;
+  padding: 0 !important;
+
+  box-shadow: none !important;
+}
+
+/* Horizontalni logotipi */
+
+#partneri .partner-img--potion{
+  max-height: 105px !important;
+}
+
+#partneri .partner-img--healing{
+  max-height: 90px !important;
+}
+
+/* Viši / kvadratniji logotipi */
+
+#partneri .partner-img--hliga{
+  max-height: 150px !important;
+}
+
+#partneri .partner-img--tihi{
+  max-height: 145px !important;
+}
+
+/* Tablet */
+
+@media(max-width: 800px){
+
+  #partneri .partners-logos{
+    grid-template-columns: 1fr !important;
+
+    max-width: 620px;
+
+    gap: 20px !important;
+  }
+
+  #partneri .partner-card,
+  #partneri .partner-card--featured{
+    min-height: 200px !important;
+  }
+}
+
+/* Mobitel */
+
+@media(max-width: 640px){
+
+  #partneri .partners-logos{
+    margin-top: 34px !important;
+  }
+
+  #partneri .partner-card,
+  #partneri .partner-card--featured{
+    min-height: 180px !important;
+
+    padding: 26px 22px;
+
+    border-radius: 25px;
+  }
+
+  #partneri .partner-card img{
+    max-width: 86% !important;
+  }
+
+  #partneri .partner-img--hliga{
+    max-height: 125px !important;
+  }
+
+  #partneri .partner-img--tihi{
+    max-height: 120px !important;
+  }
+}
